@@ -18,7 +18,7 @@
 	* Query methods
 	* @Query annotation for custom query methods
 
-#### Session 2 () : Relationships, transactions, query methods
+#### Session 2 (2 hours) : Relationships, transactions, query methods
 
 * **Advanced JPA concepts** (90 minutes)
 	* Relationships (@OneToMany, @ManyToOne etc)

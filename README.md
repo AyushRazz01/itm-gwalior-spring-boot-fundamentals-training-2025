@@ -33,7 +33,7 @@
     * Spring Boot advantages and features
 
 
-### Day 2 : Spring Boot Fundamentals
+### [Day 2 : Spring Boot Fundamentals](./notes/day-2/README.md)
 
 #### Session 1 (2 hours) : Project setup, application properties, auto-configuration
 
@@ -64,7 +64,7 @@
   * Test bean initialization and dependency injection
 
 
-### Day 3 : REST API Development with Spring Boot
+### [Day 3 : REST API Development with Spring Boot](./notes/day-3/README.md)
 
 #### Session 1 (2 hours) : REST principles, Spring MVC, controller implementation
 
@@ -94,7 +94,7 @@
   * Implement validation and error handling
 
 
-### Day 4 : Data Persistence with Spring Data JPA
+### [Day 4 : Data Persistence with Spring Data JPA](./notes/day-4/README.md)
 
 #### Session 1 (2 hours) : Spring Data JPA introduction, entity mapping repositories
 
@@ -119,7 +119,7 @@
   * Auditing with @CreatedDate
 
 
-### Day 5 : Exception Handling & Testing
+### [Day 5 : Exception Handling & Testing](./notes/day-5/README.md)
 
 #### Session 1 (2 hours) : Global exception handling, custom exceptions, logging
 
@@ -147,7 +147,7 @@
   * Write unit and integration tests for controllers and services
 
 
-### Day 6 : API Documentation & Mini Project
+### [Day 6 : API Documentation & Mini Project](./notes/day-6/README.md)
 
 #### Session 1 (2 hours) : OpenAPI/Swagger documentation, Spring Boot Actuator
 

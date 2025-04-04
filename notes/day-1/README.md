@@ -66,6 +66,10 @@ class Student {
 	// ...
 }
 ```
+In this `Student` class there are 3 fields (data points)
+- roll number of the student called `rollNumber`, which is of the `int` (integer) type.
+- name of the student called `name`, which is of the `String` type.
+- marks of the student called `marks`, which is of the `double` type.
 
 ### Inheritance and polymorphism in practice
 

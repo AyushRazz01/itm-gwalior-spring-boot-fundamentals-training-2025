@@ -30,17 +30,17 @@
 #### Session 2 (2 hours) : Modern Java features, Introduction to Spring Framework
 
 * **Java Refresher: Modern Java Features** (60 minutes)
-    * [Lambda expressions and Functional Interfaces]()
-    * [Stream API basics]()
-    * [Optional class for null handling]()
-    * [Method references]()
+    * [Lambda expressions and Functional Interfaces](./README.md#lambda-expression-and-functional-interfaces)
+    * [Stream API basics](./README.md#stream-api-basics)
+    * [Optional class for null handling](./README.md#optional-class-for-null-handling)
+    * [Method references](./README.md#method-reference)
 
 
 * **Introduction to Spring Framework** (60 minutes)
-    * [Spring Core concepts]()
-    * [Dependency Injection and Inversion of Control]()
-    * [Spring vs Spring Boot]()
-    * [Spring Boot advantages and features]()
+    * [Spring Core concepts](./README.md#spring-core-concepts)
+    * [Dependency Injection and Inversion of Control](./README.md#dependency-injection-di-and-inversion-of-control-ioc)
+    * [Spring vs Spring Boot](./README.md#spring-vs-spring-boot)
+    * [Spring Boot advantages and features](./README.md#spring-boot-advantages-and-features)
 
 
 ---

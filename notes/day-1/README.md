@@ -47,6 +47,14 @@
 
 ### Classes and Objects review
 
+**What is a class?**
+
+A class describes an object in terms of its
+  - data (variables/fields)
+  - operations (functions/methods)
+
+Any concept you wish to implement in a Java program must be _encapsulated_ within a class!
+
 ### Inheritance and polymorphism in practice
 
 ### Interfaces and abstract classes

@@ -12,6 +12,7 @@
 	* Documenting endpoints with annotations
 	* Enhancing documentation with examples
 
+
 * **Spring Boot Actuator** (60 minutes)
 	* Health checks and metrics
 	* Custom endpoints

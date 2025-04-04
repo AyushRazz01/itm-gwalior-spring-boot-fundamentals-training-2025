@@ -10,7 +10,8 @@
 	* ORM concepts and JPA overview
 	* Entity-relationship fundamentals
 	* @Entity, @Table, @Column annotations
-	* Primary keys and @Id
+	* Primary keys and @Id  
+
 
 * **Repository Pattern** (60 minutes)
 	* JpaRepository interface

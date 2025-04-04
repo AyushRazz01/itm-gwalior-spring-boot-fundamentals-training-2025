@@ -12,6 +12,7 @@
 	* POM configuration and dependencies
 	* application.properties/YAML configuration
 
+
 * **Spring Boot Core Concepts** (60 mintues)
 	* @SpringBootApplication anatomy
 	* Component scanning
@@ -26,6 +27,7 @@
 	* @Autowired and constructor injection
 	* Scopes of Spring beans (Singleton vs Prototype)
 	* Building a simple service layer
+
 
 * **Practical Exercise** (30 minutes)
 	* Create a Spring Boot application with multiple components

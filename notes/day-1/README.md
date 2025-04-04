@@ -58,7 +58,7 @@ Any concept you wish to implement in a Java program must be _encapsulated_ withi
 A student class example
 
 ```java
-class Student {
+public class Student {
 	int rollNumber;
 	String name;
 	double marks;
@@ -70,6 +70,90 @@ In this `Student` class there are 3 fields (data points)
 - roll number of the student called `rollNumber`, which is of the `int` (integer) type.
 - name of the student called `name`, which is of the `String` type.
 - marks of the student called `marks`, which is of the `double` type.
+
+This means, we are telling out Java program about a new object type - `Student`, and
+we are saying every student should have a 
+- roll number,
+- name,
+- and marks.
+
+A complete POJO implementation of the same Student class would look like this
+
+```java
+import java.util.Objects;
+
+public class Student {
+	private final int rollNumber;
+	private final String name;
+	private double marks;
+
+	public Student() {
+		this.rollNumber = 0;
+		this.name = "";
+	}
+
+	public Student(int rollNumber, String name, double marks) {
+		this.rollNumber = rollNumber;
+		this.name = name;
+		this.marks = marks;
+	}
+
+	public int getRollNumber() {
+		return rollNumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getMarks() {
+		return marks;
+	}
+
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Student student = (Student) o;
+		return rollNumber == student.rollNumber 
+				&& Double.compare(marks, student.marks) == 0 
+				&& Objects.equals(name, student.name);
+	}
+
+	@Override
+	public int hashCode() {
+		int result = rollNumber;
+		result = 31 * result + Objects.hashCode(name);
+		result = 31 * result + Double.hashCode(marks);
+		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "Student{" +
+				"rollNumber=" + rollNumber +
+				", name='" + name + '\'' +
+				", marks=" + marks +
+				'}';
+	}
+}
+```
+
+Don't be afraid of the code. This is simply the same class we have seen earlier with some extra instructions
+for the Java program. This complete "POJO" (Plain-Old Java Object) implementation can be created for any class!
+The general requirements to create a POJO class are
+1. The class should be public.
+2. The fields should be private.
+3. There should be a no-args constructor in the class.
+4. There should be public getter and setter methods.
+5. **There should be NO business logic in the class.**
+6. **Optional:** Parameterized Constructor.
+7. **Optional:** Override the `toString()` method.
+8. **Optional:** Override the `equals()` and the `hashCode()` methods.
 
 ### Inheritance and polymorphism in practice
 

@@ -5,7 +5,7 @@
 
 ### Day 1 : Introduction & Java Refresher
 
-#### Session 1 (2 hours)
+#### Session 1 (2 hours) : Welcome, environment setup, OOP concepts review
 
 * **Welcome & Overview** (30 minutes)
   * Training objectives and schedule
@@ -18,7 +18,7 @@
   * Interfaces and abstract classes
   * Annotations in Java (built-in annotations and their purpose)
 
-#### Session 2 (2 hours)
+#### Session 2 (2 hours) : Modern Java features, Introduction to Spring Framework
 
 * **Java Refresher: Modern Java Features** (60 minutes)
     * Lambda expressions and functional interfaces
@@ -35,7 +35,7 @@
 
 ### Day 2 : Spring Boot Fundamentals
 
-#### Session 1 (2 hours)
+#### Session 1 (2 hours) : Project setup, application properties, auto-configuration
 
 * **Spring Boot Project Setup** (60 minutes)
   * Spring Initializr (start.spring.io)
@@ -49,7 +49,7 @@
   * Auto-configuration
   * Profiles for environment specific configuration
 
-#### Session 2 (2 hours)
+#### Session 2 (2 hours) : Dependency Injection, component scanning, bean lifecycle
 
 * **Dependency Injection in Spring Boot** (90 minutes)
   * Bean lifecycle
@@ -62,3 +62,32 @@
   * Create a Spring Boot application with multiple components
   * Configure beans with different injection methods
   * Test bean initialization and dependency injection
+
+### Day 3 : REST API Development with Spring Boot
+
+#### Session 1 (2 hours) : REST principles, Spring MVC, controller implementation
+
+* **REST Principles** (45 minutes)
+  * HTTP methods and their semantics
+  * Resource naming conventions
+  * Status codes
+  * Richardson Maturity Model
+
+* **Spring MVC & REST Controllers** (75 minutes)
+  * @RestController vs @Controller
+  * Request Mapping (@GetMapping, @PostMapping, etc.)
+  * Path variables and request parameters
+  * RequestBody and ResponseEntity
+
+#### Session 2 (2 hours) : Advanced REST features, request/response handling, validation
+
+* **Building RESTful APIs** (90 minutes)
+  * API versioning strategies
+  * Request/Response DTOs
+  * Validation (@Valid, custom validators)
+  * Content negotiation (JSON, XML)
+
+* **Practical Exercise** (30 minutes)‸
+  * Implement a CRUD REST API for a simple entity
+  * Test endpoints using Postman
+  * Implement validation and error handling

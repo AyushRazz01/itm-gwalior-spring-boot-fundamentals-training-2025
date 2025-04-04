@@ -26,3 +26,8 @@
 	* Lazy vs Eager loading
 	* Transaction management (@Transactional)
 	* Auditing with @CreatedDate
+
+* **Practical Exercise** (30 minutes)
+  * Design and implement entities with relationships
+  * Create repositories with custom query methods 
+  * Test data access layer 

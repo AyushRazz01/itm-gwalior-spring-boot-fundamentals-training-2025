@@ -87,7 +87,7 @@
   * Validation (@Valid, custom validators)
   * Content negotiation (JSON, XML)
 
-* **Practical Exercise** (30 minutes)‸
+* **Practical Exercise** (30 minutes)
   * Implement a CRUD REST API for a simple entity
   * Test endpoints using Postman
   * Implement validation and error handling

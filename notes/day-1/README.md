@@ -2,10 +2,9 @@
 
 ## **Duration**: 4 hours per day x 6 days (24 hours total)
 
-
 ### Day 1 : Introduction & Java Refresher
 
-#### Session 1 (2 hours)
+#### Session 1 (2 hours) : Welcome, environment setup, OOP concepts review
 
 * **Welcome & Overview** (30 minutes)
   * Training objectives and schedule
@@ -28,7 +27,7 @@
   * Interfaces and abstract classes
   * Annotations in Java (built-in annotations and their purpose)
 
-#### Session 2 (2 hours)
+#### Session 2 (2 hours) : Modern Java features, Introduction to Spring Framework
 
 * **Java Refresher: Modern Java Features** (60 minutes)
     * Lambda expressions and functional interfaces

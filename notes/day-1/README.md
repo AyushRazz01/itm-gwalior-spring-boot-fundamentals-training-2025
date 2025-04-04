@@ -3,7 +3,7 @@
 ## **Duration**: 4 hours per day x 6 days (24 hours total)
 
 
-### [Day 1 : Introduction & Java Refresher](/notes/day-1/README.md)
+### Day 1 : Introduction & Java Refresher
 
 #### Session 1 (2 hours)
 

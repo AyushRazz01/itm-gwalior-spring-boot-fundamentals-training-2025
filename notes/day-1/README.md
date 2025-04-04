@@ -55,6 +55,18 @@ A class describes an object in terms of its
 
 Any concept you wish to implement in a Java program must be _encapsulated_ within a class!
 
+A student class example
+
+```java
+class Student {
+	int rollNumber;
+	String name;
+	double marks;
+	
+	// ...
+}
+```
+
 ### Inheritance and polymorphism in practice
 
 ### Interfaces and abstract classes

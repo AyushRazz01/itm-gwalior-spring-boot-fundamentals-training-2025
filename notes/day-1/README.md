@@ -22,25 +22,25 @@
 
 
 * **Java Refresher: OOP Concepts** (90 minutes)
-  * Classes and Objects review
-  * Inheritance and polymorphism in practice
-  * Interfaces and abstract classes
-  * Annotations in Java (built-in annotations and their purpose)
+  * [Classes and Objects review](./README.md#classes-and-objects-review)
+  * [Inheritance and polymorphism in practice](./README.md#inheritance-and-polymorphism-in-practice)
+  * [Interfaces and abstract classes](./README.md#interfaces-and-abstract-classes)
+  * [Annotations in Java (built-in annotations and their purpose)](./README.md#annotations-in-java-built-in-annotations-and-their-purpose)
 
 #### Session 2 (2 hours) : Modern Java features, Introduction to Spring Framework
 
 * **Java Refresher: Modern Java Features** (60 minutes)
-    * Lambda expressions and Functional Interfaces
-    * Stream API basics
-    * Optional class for null handling
-    * Method references
+    * [Lambda expressions and Functional Interfaces]()
+    * [Stream API basics]()
+    * [Optional class for null handling]()
+    * [Method references]()
 
 
 * **Introduction to Spring Framework** (60 minutes)
-    * Spring Core concepts
-    * Dependency Injection and Inversion of Control
-    * Spring vs Spring Boot
-    * Spring Boot advantages and features
+    * [Spring Core concepts]()
+    * [Dependency Injection and Inversion of Control]()
+    * [Spring vs Spring Boot]()
+    * [Spring Boot advantages and features]()
 
 
 ---

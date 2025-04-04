@@ -63,6 +63,7 @@
   * Configure beans with different injection methods
   * Test bean initialization and dependency injection
 
+
 ### Day 3 : REST API Development with Spring Boot
 
 #### Session 1 (2 hours) : REST principles, Spring MVC, controller implementation
@@ -91,3 +92,82 @@
   * Implement a CRUD REST API for a simple entity
   * Test endpoints using Postman
   * Implement validation and error handling
+
+
+### Day 4 : Data Persistence with Spring Data JPA
+
+#### Session 1 (2 hours) : Spring Data JPA introduction, entity mapping repositories
+
+* **Introduction to Spring Data JPA with PostgreSQL** (60 minutes)
+  * ORM concepts and JPA overview
+  * Entity-relationship fundamentals
+  * @Entity, @Table, @Column annotations
+  * Primary keys and @Id
+
+* **Repository Pattern** (60 minutes)
+  * JpaRepository interface
+  * CRUD operations
+  * Query methods
+  * @Query annotation for custom query methods
+
+#### Session 2 () : Relationships, transactions, query methods
+
+* **Advanced JPA concepts** (90 minutes)
+  * Relationships (@OneToMany, @ManyToOne etc)
+  * Lazy vs Eager loading
+  * Transaction management (@Transactional)
+  * Auditing with @CreatedDate
+
+
+### Day 5 : Exception Handling & Testing
+
+#### Session 1 (2 hours) : Global exception handling, custom exceptions, logging
+
+* **Global Exception Handling** (90 minutes)
+  * @ControllerAdvice and @ExceptionHandler
+  * Creating custom exceptions
+  * Standardized error responses
+  * Handling validation errors
+
+* **Logging in Spring Boot** (30 minutes)
+  * SLF4J and Logback configurations
+  * Log levels and best practices
+  * Structures logging
+
+#### Session 2 (2 hours) : Unit and integration testing with JUnit and Mockito
+
+* **Testing Spring Boot Applications** (90 minutes)
+  * Unit testing with JUnit 5
+  * Mock objects with Mockito
+  * @SpringBootTest and TestRestTemplate
+  * Testing slices with @WebMvcTest and @DataJpaTest
+
+* **Practical Exercise** (30 minutes)
+  * Implement global exception handling for a REST API
+  * Write unit and integration tests for controllers and services
+
+
+### Day 6 : API Documentation & Mini Project
+
+#### Session 1 (2 hours) : OpenAPI/Swagger documentation, Spring Boot Actuator
+
+* **API Documentation with OpenAPI** (60 minutes)
+  * Springdoc-openapi setup
+  * Swagger UI integration
+  * Documenting endpoints with annotations
+  * Enhancing documentation with examples
+
+* **Spring Boot Actuator** (60 minutes)
+  * Health checks and metrics
+  * Custom endpoints
+  * Security considerations
+
+#### Session 2 (2 hours) : Guided mini-project implementation and review
+
+* **Mini Project: Building a complete API** (120 minutes)
+  * Requirements analysis
+  * Designing the data model
+  * Implementing repositories, services, and controllers
+  * Adding validation and exception handling
+  * Documenting with OpenAPI
+  * Testing the complete application

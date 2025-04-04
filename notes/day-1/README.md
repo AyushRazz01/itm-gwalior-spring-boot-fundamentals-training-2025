@@ -221,3 +221,4 @@ class such as `name`, `height`, `weight` etc. Define a _static_ field for the `B
 Create a `Main` class, and create the `main()` method inside it. Create a static variable inside the `main()` method of the `Bird` type.
 Initialize the variable with a valid `Bird` object and print the values of the instance and _static_ fields. Write some logic
 in the `Bird` class to increment the `birdCount` variable every time a new `Bird` class object is created. Create an array of `Bird`s (`Bird[]`)
+4. Try the Stream API practice questions given [here](https://github.com/dbc2201/StreamPracticeQuestions)

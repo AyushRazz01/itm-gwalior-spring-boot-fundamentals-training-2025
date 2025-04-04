@@ -12,6 +12,7 @@
 	* Standardized error responses
 	* Handling validation errors
 
+
 * **Logging in Spring Boot** (30 minutes)
 	* SLF4J and Logback configurations
 	* Log levels and best practices
@@ -24,6 +25,7 @@
 	* Mock objects with Mockito
 	* @SpringBootTest and TestRestTemplate
 	* Testing slices with @WebMvcTest and @DataJpaTest
+
 
 * **Practical Exercise** (30 minutes)
 	* Implement global exception handling for a REST API

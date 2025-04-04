@@ -284,3 +284,27 @@ in the `Bird` class to increment the `birdCount` variable every time a new `Bird
         return null;
     }
     ```
+--- 
+##### Special Problem Statement
+Design a robust product classification hierarchy for an inventory system where:
+
+Products must be classified as exactly one of the following: Electronics, Clothing, or Food.
+Each main category must restrict which specific product types can extend/implement it:
+
+Electronics should only allow Smartphone, Laptop, and SmartWatch implementations
+Clothing should only allow TShirt, Jeans, and Jacket implementations
+Food should only allow Fruit, Vegetable, and PreparedMeal implementations
+
+
+It should be impossible for developers to create new product types outside these predefined categories.
+The system must enforce strong compile-time type checking to prevent unauthorized extensions of the hierarchy.
+
+Requirements
+
+Create a type hierarchy that enforces these strict classification rules
+Implement the required classes/interfaces with appropriate attributes
+Demonstrate your solution with a test program that:
+
+Creates instances of valid product types
+Shows how the system prevents creation of invalid product types
+Processes different products appropriately based on their classification.

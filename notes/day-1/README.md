@@ -7,16 +7,15 @@
 #### Session 1 (2 hours) : Welcome, environment setup, OOP concepts review
 
 * **Welcome & Overview** (30 minutes)
-  * Training objectives and schedule
+  * Training objectives and schedule  
 
-    By the end of this training program, _YOU_ will be able to:
-
-    * Understand core Spring Boot concepts and its advantages over traditional Spring framework.
-    * Design and implement RESTful APIs following industry best practices.
-    * Work with data persistence using Spring Data JPA and Hibernate.
-    * Implement proper exception handling and API documentation.
-    * Apply the MVC architectural pattern in Spring Boot applications.
-    * Develop and test a complete Spring Boot application from scratch.
+    > By the end of this training program, _YOU_ will be able to:
+    > * Understand core Spring Boot concepts and its advantages over traditional Spring framework.
+    > * Design and implement RESTful APIs following industry best practices.
+    > * Work with data persistence using Spring Data JPA and Hibernate.
+    > * Implement proper exception handling and API documentation.
+    > * Apply the MVC architectural pattern in Spring Boot applications.
+    > * Develop and test a complete Spring Boot application from scratch.
 
   * Pre-requisite knowledge assessment
   * Setting up the development environment (JDK, IntelliJ IDEA, Git)
@@ -31,7 +30,7 @@
 #### Session 2 (2 hours) : Modern Java features, Introduction to Spring Framework
 
 * **Java Refresher: Modern Java Features** (60 minutes)
-    * Lambda expressions and functional interfaces
+    * Lambda expressions and Functional Interfaces
     * Stream API basics
     * Optional class for null handling
     * Method references
@@ -42,3 +41,30 @@
     * Dependency Injection and Inversion of Control
     * Spring vs Spring Boot
     * Spring Boot advantages and features
+
+
+---
+
+### Classes and Objects review
+
+### Inheritance and polymorphism in practice
+
+### Interfaces and abstract classes
+
+### Annotations in Java (built-in annotations and their purpose)
+
+### Lambda expression and Functional Interfaces
+
+### Stream API basics
+
+### Optional class for null handling
+
+### Method reference
+
+### Spring Core concepts
+
+### Dependency Injection (DI) and Inversion of Control (IoC)
+
+### Spring vs Spring Boot
+
+### Spring Boot advantages and features

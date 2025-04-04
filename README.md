@@ -138,7 +138,7 @@
 * **Logging in Spring Boot** (30 minutes)
   * SLF4J and Logback configurations
   * Log levels and best practices
-  * Structures logging
+  * Structured logging
 
 #### Session 2 (2 hours) : Unit and integration testing with JUnit and Mockito
 

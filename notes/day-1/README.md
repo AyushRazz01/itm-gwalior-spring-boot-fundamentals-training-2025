@@ -222,3 +222,65 @@ Create a `Main` class, and create the `main()` method inside it. Create a static
 Initialize the variable with a valid `Bird` object and print the values of the instance and _static_ fields. Write some logic
 in the `Bird` class to increment the `birdCount` variable every time a new `Bird` class object is created. Create an array of `Bird`s (`Bird[]`)
 4. Try the Stream API practice questions given [here](https://github.com/dbc2201/StreamPracticeQuestions)
+5. Write a program that counts duplicate characters from a given string.
+    ```java
+    /**
+     * Counts duplicate characters in a given string and returns only those 
+     * that appear more than the specified threshold.
+     *
+     * @param input the string to analyze for duplicate characters
+     * @param threshold minimum number of occurrences to be considered duplicate
+     * @return a Map with each duplicate character as key and its count as value
+     * @throws NullPointerException if the input string is null
+     * @throws IllegalArgumentException if threshold is less than 1
+     */
+    public Map<Character, Integer> countDuplicateCharacters(String input, int threshold) 
+            throws NullPointerException, IllegalArgumentException {
+        // TODO: Implement the duplicate counting logic
+        return new HashMap<>(); // Placeholder return
+    }
+    ```
+6. Write a program that reverses the letters of a word.
+    ```java
+    /**
+     * Reverses the letters of each word in the input text while preserving word order.
+     * For example: "Hello World" becomes "olleH dlroW"
+     *
+     * @param text The input text to process
+     * @return A new string with each word's letters reversed
+     * @throws IllegalArgumentException if the input text is null or empty
+     */
+    public String reverseLettersInWords(String text) throws IllegalArgumentException {
+        // TODO: Implement the letter reversal logic
+        return null;
+    }
+    ```
+7. Write a program that counts the occurrences of a certain character in a given string.
+    ```java
+    /**
+     * Counts the number of occurrences of a specific character in the given string.
+     *
+     * @param inputString the string to search in
+     * @param targetChar the character to search for
+     * @return the number of occurrences of the target character in the input string
+     * @throws NullPointerException if the input string is null
+     */
+    public static int countCharacterOccurrences(String inputString, char targetChar) throws NullPointerException {
+        // TODO: Implement the character counting logic
+        return 0;
+    }
+    ```
+8. Write a program that removes all white spaces from the given string.
+    ```java
+    /**
+     * Removes all white spaces from the input string.
+     * 
+     * @param input the string from which to remove white spaces
+     * @return a new string with all white spaces removed
+     * @throws NullPointerException if the input string is null
+     */
+    public static String removeWhiteSpaces(String input) throws NullPointerException {
+        // TODO: Implement the white space removing logic
+        return null;
+    }
+    ```

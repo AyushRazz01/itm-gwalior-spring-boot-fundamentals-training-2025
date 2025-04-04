@@ -176,3 +176,48 @@ The general requirements to create a POJO class are
 ### Spring vs Spring Boot
 
 ### Spring Boot advantages and features
+
+---
+
+## Practice Exercises
+
+1. Create an `abstract` superclass named `Fruit`, and a concrete subclass named `Apple`. The superclass (`Fruit`) should 
+belong to a package called `food` and the subclass (`Apple`) can belong to the default package. Make the superclass `public`
+and give the subclass **default** access.
+   - Create the superclass as follows
+   ```java
+        package food;
+     
+        public abstract class Fruit {
+            // data 
+            // operations
+            // write the complete POJO implementation
+        }
+     ```
+   - Create the subclass as follows
+   ```java
+        import food.Fruit;
+        class Apple extends Fruit {
+            // data
+            // operations
+            // write the complete POJO implementation
+        }  
+   ```
+   - Create a `Main` class, and create the `main()` method inside it. Create objects of both the classes.  
+
+2. You are given an interface as follows
+   ```java
+        public interface Vehicle {
+            public int getYear();
+            public String getModelName;
+            public String getCompanyName;
+        }    
+   ```
+   Write a class called `Ferrari` that implement the interface. Write the complete POJO implementation for the `Ferrari`
+   class. Create a `Main` class, and create the `main()` method inside it. Create object of the `Ferrari` class inside it.
+
+3. Create a class called `Bird` and define an instance method called `fly()` inside it. Define some instance fields for the `Bird`
+class such as `name`, `height`, `weight` etc. Define a _static_ field for the `Bird` class called `birdCount`. 
+Create a `Main` class, and create the `main()` method inside it. Create a static variable inside the `main()` method of the `Bird` type.
+Initialize the variable with a valid `Bird` object and print the values of the instance and _static_ fields. Write some logic
+in the `Bird` class to increment the `birdCount` variable every time a new `Bird` class object is created. Create an array of `Bird`s (`Bird[]`)

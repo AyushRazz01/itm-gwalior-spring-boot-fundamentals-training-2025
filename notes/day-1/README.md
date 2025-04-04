@@ -21,6 +21,7 @@
   * Pre-requisite knowledge assessment
   * Setting up the development environment (JDK, IntelliJ IDEA, Git)
 
+
 * **Java Refresher: OOP Concepts** (90 minutes)
   * Classes and Objects review
   * Inheritance and polymorphism in practice
@@ -34,6 +35,7 @@
     * Stream API basics
     * Optional class for null handling
     * Method references
+
 
 * **Introduction to Spring Framework** (60 minutes)
     * Spring Core concepts

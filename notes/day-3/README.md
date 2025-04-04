@@ -12,6 +12,7 @@
 	* Status codes
 	* Richardson Maturity Model
 
+
 * **Spring MVC & REST Controllers** (75 minutes)
 	* @RestController vs @Controller
 	* Request Mapping (@GetMapping, @PostMapping, etc.)
@@ -25,6 +26,7 @@
 	* Request/Response DTOs
 	* Validation (@Valid, custom validators)
 	* Content negotiation (JSON, XML)
+
 
 * **Practical Exercise** (30 minutes)
 	* Implement a CRUD REST API for a simple entity

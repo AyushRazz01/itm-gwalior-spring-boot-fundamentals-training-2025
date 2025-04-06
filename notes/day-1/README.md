@@ -275,6 +275,8 @@ can now actually 4 fields
 
 This is also true for all the methods created in the Student class.
 
+---
+
 **Types of Relationships**
 
 * IS-A (inheritance)  

@@ -534,6 +534,16 @@ public interface Coder {
 Notice that although the `Coder` interface now has two methods, only one is abstract, as allowed. Hence, it still qualifies
 as a `Functional Interface` to the Java compiler.
 
+In Java, there is a package called `java.util.function`, which you can also observe in IntelliJ IDEA in the "Project View".
+This package contains 43 functional interfaces built-in and ready to go. You don't need to remember all of this,
+just the basic ones will do for now
+- Function: Represents a function that accepts one argument and produces a result.
+- Consumer: Represents an operation that accepts a single input argument and returns no result.
+- Supplier: Represents a supplier of results.
+- Predicate: Represents a predicate (boolean-valued function) of one argument.
+
+All the other in-built functional interfaces are built on top of these.
+
 ---
 
 **Lambda Expressions**

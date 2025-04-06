@@ -544,9 +544,33 @@ just the basic ones will do for now
 
 All the other in-built functional interfaces are built on top of these.
 
+You can see a summary of all the in-built functional interfaces in Java [here](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html)
+
 ---
 
 **Lambda Expressions**
+
+A Lambda Expression is a new syntactical way (since Java 8) for us developers to provide the concrete implementation for 
+an abstract method of a functional interface anonymously.
+
+```java
+
+@FunctionalInterface
+public interface Coder {
+    String code(String language);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Coder chatur = language -> "I can code in " + language + "!";
+        chatur.code("Java");
+    }
+}
+```
+
+Note that earlier, just to provide the concrete implementation of the `code()` method, we had to implement the `Coder` 
+interface in the `Student` class. But now, since the lambda provides us with a way of creating this anonymous class we can
+use the same functionality with concise syntax.
 
 ---
 

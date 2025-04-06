@@ -503,6 +503,37 @@ throughout this course, it is also possible to create your own annotation comple
 
 **Functional Interfaces**
 
+A Functional Interface is a special type of interface that can have **ONLY ONE**
+abstract method, hence they are also called **SINGLE ABSTRACT METHOD Types**.
+
+```java
+@FunctionalInterface
+public interface Coder {
+    String code(String language);
+}
+```
+This is the same `Coder` interface example from before, since the interface only has on abstract method, it qualifies as
+a `Functional Interface`. 
+
+Notice the `@FunctionalInterface` annotation, it indicates that an interface type declaration is intended to be a 
+functional interface as defined by Java i.e. it can only have at most one abstract method.
+
+The interface is still allowed to have any number of non-abstract methods inside it.
+
+```java
+@FunctionalInterface
+public interface Coder {
+    String code(String language);
+	
+    default void study(int numberOfHours) {
+        System.out.println("Studying...");
+    }
+}
+```
+
+Notice that although the `Coder` interface now has two methods, only one is abstract, as allowed. Hence, it still qualifies
+as a `Functional Interface` to the Java compiler.
+
 ---
 
 **Lambda Expressions**

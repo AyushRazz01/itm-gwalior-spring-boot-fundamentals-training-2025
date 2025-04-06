@@ -77,6 +77,8 @@ we are saying every student should have a
 - name,
 - and marks.
 
+**POJO: Plain-Old Java Object**
+
 A complete POJO implementation of the same Student class would look like this
 
 ```java
@@ -155,13 +157,51 @@ The general requirements to create a POJO class are
 7. **Optional:** Override the `toString()` method.
 8. **Optional:** Override the `equals()` and the `hashCode()` methods.
 
+**What is an object?**
+
+An _object_ in Java is a real-world entity, created from a class, that exists in memory when the Java program is running!
+
+For example, before creating an actual house, an architect designs the house on a blueprint. IN this scenario, the blueprint
+is the _class_ and the actual house is the _object_.
+
+Code Example - 
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Student chatur = new Student();
+    }
+}
+```
+
+In this example, we have created a new `Student` object, and we are referring to the object with the name `chatur`.
+
+After the creation of the object is completed successfully, you can read and write the values of the data fields of the object
+i.e. `rollNumber`, `name`, and `marks` as defined in the `Student` class. 
+
+Also, you can _make_ the `chatur` object do something by calling the `Student` methods defined in the class.
+
 ### Inheritance and polymorphism in practice
+
+**Inheritance**
+
+**Polymorphism**
 
 ### Interfaces and abstract classes
 
+**Abstract Class**
+
+**Interface**
+
 ### Annotations in Java (built-in annotations and their purpose)
 
+**@Override**
+
 ### Lambda expression and Functional Interfaces
+
+**Functional Interfaces**
+
+**Lambda Expressions**
 
 ### Stream API basics
 

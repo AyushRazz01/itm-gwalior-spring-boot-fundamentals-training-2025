@@ -865,6 +865,8 @@ Points to remember:
 - The Optional type is used with operations that might not produce a result
 - You can chain multiple operations together for complex data processing
 
+---
+
 ### Method reference
 
 A method reference is a shorthand way to refer to a method without actually calling it.
@@ -931,6 +933,8 @@ class Main {
 }
 ```
 
+---
+
 ### Optional class for null handling
 
 Optional helps eliminate null pointer exceptions by forcing you to explicitly handle cases where a value might be absent.
@@ -959,13 +963,52 @@ Just a small chang like this forces us the developer to handle the case where th
 any of the users, in such a case instead of simply saying `return null`, now the return type `Optional<User>` of the method
 will not allow us to use the `null` as a return value. This will make you think what should actually be returned in such a case.
 
+---
+
 ### Spring Core concepts
 
-### Dependency Injection (DI) and Inversion of Control (IoC)
+Spring Framework is a comprehensive Java application development framework that has become the industry standard for enterprise Java development. Here are its core concepts:
 
-### Spring vs Spring Boot
+**Inversion of Control (IoC)**  
+The fundamental concept where Spring takes control of object creation and lifecycle management instead of the developer doing it manually. Instead of creating objects directly with "new," you let Spring handle instantiation and dependencies.
 
-### Spring Boot advantages and features
+**Dependency Injection (DI)**  
+Spring's implementation of IoC where objects are given their dependencies rather than creating them internally. This promotes loose coupling and makes code more testable. Spring supports three types of dependency injection:
+- Constructor injection (preferred)
+- Setter injection
+- Field injection (using @Autowired)
+
+**Bean Management**  
+A Spring bean is an object managed by the Spring IoC container. Beans are created, configured, and managed by Spring. You can define beans through:
+- XML configuration
+- Java configuration with @Bean
+- Component scanning with @Component, @Service, @Repository, etc.
+
+**Application Context**  
+The central interface for providing configuration information to the application. It represents the Spring IoC container and is responsible for instantiating, configuring, and assembling beans.
+
+**Aspect-Oriented Programming (AOP)**  
+Allows separation of cross-cutting concerns (like logging, security, or transactions) from business logic. Spring AOP lets you define "aspects" that can be applied across multiple classes without modifying their code.
+
+**Spring MVC**  
+A web framework built on the Model-View-Controller pattern for building web applications. It provides features like request mapping, data binding, validation, and view resolution.
+
+**Data Access**  
+Spring provides consistent data access abstractions across different technologies:
+- JDBC Template simplifies database operations
+- Transaction management for data integrity
+- ORM integration with Hibernate, JPA, etc.
+
+**Spring Boot**  
+While technically a separate project, Spring Boot has become a core part of the Spring ecosystem. It provides auto-configuration, standalone applications, and an embedded server to simplify Spring application development.
+
+**Profiles**  
+Allow you to define different configurations for different environments (development, testing, production) and activate them conditionally.
+
+**Spring Security**  
+Framework for authentication, authorization, and protection against common attacks.
+
+These core concepts work together to create a flexible, modular architecture that's both powerful and maintainable. The Spring Framework significantly reduces boilerplate code and lets developers focus on business logic rather than infrastructure concerns.
 
 ---
 

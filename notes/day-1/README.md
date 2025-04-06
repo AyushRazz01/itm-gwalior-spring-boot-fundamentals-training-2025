@@ -342,9 +342,66 @@ public class Student {
     private String name;
     private double marks;
 
-	
+    public void updateMarks(double newMarks) {
+        this.marks = newMarks;
+    }
+
+    public void updateMarks(double additionalMarks, boolean isBonus) {
+        if (isBonus) this.marks += additionalMarks;
+        else this.marks = additionalMarks;
+    }
+}
+
+```
+Here you can see that the `updateMarks` method is created twice. The first declaration has only one parameter called `newMarks`,
+but the second one has two parameters `additionalMarks` and `isBonus`. This is how the `updateMarks` method behaves
+differently on the basis of number and type of input.
+
+```java
+public class Topper extends Student {
+    @Override
+    public void updateMarks(double newMarks) {
+        // Ensure topper's marks are always at least 90
+        if (newMarks < 90) {
+            super.updateMarks(90.0);
+        } else {
+            super.updateMarks(newMarks);
+        }
+    }
+
+    @Override
+    public void updateMarks(double additionalMarks, boolean isBonus) {
+        if (isBonus) {
+            // For bonus, add points but ensure minimum of 90
+            super.updateMarks(additionalMarks, true);
+        } else {
+            // For regular updates, ensure minimum of 90
+            if (additionalMarks < 90) {
+                super.updateMarks(90.0);
+            } else {
+                super.updateMarks(additionalMarks);
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student chatur = new Student();
+		chatur.updateMarks(99);
+		
+		Topper rancho = new Topper();
+		rancho.updateMarks(99);
+    }
 }
 ```
+
+Here you can see, since the `Topper` class is inheriting the `updateMarks()` method from the `Student` class, the 
+method will work as defined in the `Student` class, but the `Topper` class wants the `updateMarks()` method to behave differently
+if the `Topper` object is calling the method. Hence, we have **overridden** the method.
+
+Both the `chatur.updateMarks()` and the `rancho.updateMarks()` methods will work differently, but they are connected together 
+via inheritance. So, in a way you can also say that inheritance is needed for overriding a method.
 
 ---
 

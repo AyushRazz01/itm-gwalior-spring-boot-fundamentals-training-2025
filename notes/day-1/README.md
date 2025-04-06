@@ -77,6 +77,8 @@ we are saying every student should have a
 - name,
 - and marks.
 
+---
+
 **POJO: Plain-Old Java Object**
 
 A complete POJO implementation of the same Student class would look like this
@@ -157,6 +159,8 @@ The general requirements to create a POJO class are
 7. **Optional:** Override the `toString()` method.
 8. **Optional:** Override the `equals()` and the `hashCode()` methods.
 
+---
+
 **What is an object?**
 
 An _object_ in Java is a real-world entity, created from a class, that exists in memory when the Java program is running!
@@ -191,6 +195,8 @@ public class Main {
     }
 }
 ```
+
+---
 
 ### Inheritance and polymorphism in practice
 
@@ -314,24 +320,57 @@ This is also true for all the methods created in the Student class.
 
     In this example, we can say that the `College` class uses a `Student` object.
 
+---
 
 **Polymorphism**
+
+Polymorphism in Java, is a _technique_ by which a method can behave differently based on the number and type of input _OR_
+the type of object that is calling the method, namely `method overloading` and `method overriding`.
+
+Polymorphism in Java can be observed in two ways:
+
+- Method Overloading (Compile-time Polymorphism)
+- Method Overriding (Runtime Polymorphism)
+
+Let us take the `Student` class example again.
+
+```java
+public class Student {
+    private int rollNumber;
+    private String name;
+    private double marks;
+
+	
+}
+```
+
+---
 
 ### Interfaces and abstract classes
 
 **Abstract Class**
 
+---
+
 **Interface**
+
+---
 
 ### Annotations in Java (built-in annotations and their purpose)
 
 **@Override**
 
+---
+
 ### Lambda expression and Functional Interfaces
 
 **Functional Interfaces**
 
+---
+
 **Lambda Expressions**
+
+---
 
 ### Stream API basics
 

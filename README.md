@@ -2,7 +2,7 @@
 
 ## **Duration**: 4 hours per day x 6 days (24 hours total)
 
-![Spring Boot - Fundamentals - Code with DBC.png](assets/code/Spring%20Boot%20-%20Fundamentals%20-%20Code%20with%20DBC.png)
+![Spring Boot - Fundamentals - Code with DBC.png](Spring%20Boot%20-%20Fundamentals%20-%20Code%20with%20DBC.png)
 
 ### [Day 1 : Introduction & Java Refresher](./notes/day-1/README.md)
 

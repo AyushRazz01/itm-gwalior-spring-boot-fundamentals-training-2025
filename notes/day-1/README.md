@@ -572,9 +572,298 @@ Note that earlier, just to provide the concrete implementation of the `code()` m
 interface in the `Student` class. But now, since the lambda provides us with a way of creating this anonymous class we can
 use the same functionality with concise syntax.
 
+The general syntax for a lambda expression in Java is as follows
+
+```
+(parameters) -> { body }
+```
+
+The `->` here is a new operator added in Java 8 called the **arrow operator**.
+
 ---
 
 ### Stream API basics
+
+The Stream API is a powerful, but simple to understand set of tool for processing a sequence of elements.
+
+It introduces the `map-filter-reduce` operations on collections such as arrays, lists, sets, etc.
+
+```java
+import java.util.*;
+import java.util.stream.*;
+
+class Student {
+    private int rollNumber;
+    private String name;
+    private double marks;
+    private String department;
+    
+    public Student(int rollNumber, String name, double marks, String department) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.marks = marks;
+        this.department = department;
+    }
+    
+    public int getRollNumber() { return rollNumber; }
+    public String getName() { return name; }
+    public double getMarks() { return marks; }
+    public String getDepartment() { return department; }
+    
+    @Override
+    public String toString() {
+        return "Student{" +
+               "rollNumber=" + rollNumber +
+               ", name='" + name + '\'' +
+               ", marks=" + marks +
+               ", department='" + department + '\'' +
+               '}';
+    }
+}
+
+public class StreamAPIDemo {
+    
+    public static void main(String[] args) {
+        List<Student> students = List.of(
+            new Student(101, "Alice", 92.5, "Computer Science"),
+            new Student(102, "Bob", 78.0, "Mathematics"),
+            new Student(103, "Charlie", 86.7, "Computer Science"),
+            new Student(104, "David", 65.5, "Physics"),
+            new Student(105, "Emma", 95.0, "Mathematics"),
+            new Student(106, "Frank", 72.8, "Physics"),
+            new Student(107, "Grace", 88.3, "Computer Science")
+        );
+        
+        System.out.println("===== Stream API Demonstrations =====");
+        
+        // Filter operation
+        filterStudents(students);
+        
+        // Map operations
+        transformStudentData(students);
+        
+        // Sort operations
+        sortStudents(students);
+        
+        // Aggregation operations
+        aggregateStudentData(students);
+        
+        // Grouping operations
+        groupStudents(students);
+        
+        // Additional operations
+        additionalOperations(students);
+    }
+    
+    // Filter demonstration
+    public static void filterStudents(List<Student> students) {
+        System.out.println("\n----- Filter Operations -----");
+        
+        // Filter students with marks above 85
+        List<Student> highScorers = students.stream()
+            .filter(student -> student.getMarks() > 85)
+            .collect(Collectors.toList());
+        
+        System.out.println("Students with marks above 85:");
+        highScorers.forEach(student -> System.out.println(student.getName() + ": " + student.getMarks()));
+        
+        // Filter CS students
+        long csStudentCount = students.stream()
+            .filter(student -> student.getDepartment().equals("Computer Science"))
+            .count();
+        
+        System.out.println("Number of Computer Science students: " + csStudentCount);
+    }
+    
+    // Map demonstration
+    public static void transformStudentData(List<Student> students) {
+        System.out.println("\n----- Map Operations -----");
+        
+        // Get all student names
+        List<String> studentNames = students.stream()
+            .map(Student::getName)
+            .collect(Collectors.toList());
+        
+        System.out.println("Student names: " + studentNames);
+        
+        // Transform student marks (add 5 bonus points)
+        List<Double> adjustedMarks = students.stream()
+            .map(student -> student.getMarks() + 5.0)
+            .collect(Collectors.toList());
+        
+        System.out.println("Marks after 5 point bonus: " + adjustedMarks);
+        
+        // Create custom formatted strings
+        List<String> formattedStudents = students.stream()
+            .map(student -> student.getName() + " (" + student.getDepartment() + "): " + student.getMarks())
+            .collect(Collectors.toList());
+        
+        System.out.println("Formatted student info:");
+        formattedStudents.forEach(System.out::println);
+    }
+    
+    // Sort demonstration
+    public static void sortStudents(List<Student> students) {
+        System.out.println("\n----- Sort Operations -----");
+        
+        // Sort by marks (ascending)
+        List<Student> sortedByMarks = students.stream()
+            .sorted(Comparator.comparing(Student::getMarks))
+            .collect(Collectors.toList());
+        
+        System.out.println("Students sorted by marks (ascending):");
+        sortedByMarks.forEach(s -> System.out.println(s.getName() + ": " + s.getMarks()));
+        
+        // Sort by name
+        List<String> namesSortedAlphabetically = students.stream()
+            .map(Student::getName)
+            .sorted()
+            .collect(Collectors.toList());
+        
+        System.out.println("Student names sorted alphabetically: " + namesSortedAlphabetically);
+        
+        // Sort by department and then by marks (descending)
+        List<Student> sortedByDeptAndMarks = students.stream()
+            .sorted(Comparator.comparing(Student::getDepartment)
+                    .thenComparing(Student::getMarks, Comparator.reverseOrder()))
+            .collect(Collectors.toList());
+        
+        System.out.println("Students sorted by department and then by marks (descending):");
+        sortedByDeptAndMarks.forEach(s -> 
+            System.out.println(s.getDepartment() + " - " + s.getName() + ": " + s.getMarks()));
+    }
+    
+    // Aggregation demonstration
+    public static void aggregateStudentData(List<Student> students) {
+        System.out.println("\n----- Aggregation Operations -----");
+        
+        // Calculate average marks
+        double averageMarks = students.stream()
+            .mapToDouble(Student::getMarks)
+            .average()
+            .orElse(0.0);
+        
+        System.out.println("Average marks: " + averageMarks);
+        
+        // Find student with highest marks
+        Student topStudent = students.stream()
+            .max(Comparator.comparing(Student::getMarks))
+            .orElse(null);
+        
+        System.out.println("Top student: " + 
+            (topStudent != null ? topStudent.getName() + " with " + topStudent.getMarks() + " marks" : "None"));
+        
+        // Check if all students passed (marks > 60)
+        boolean allPassed = students.stream()
+            .allMatch(student -> student.getMarks() > 60);
+        
+        System.out.println("Did all students pass? " + allPassed);
+        
+        // Check if any student got perfect score
+        boolean anyPerfectScore = students.stream()
+            .anyMatch(student -> student.getMarks() == 100.0);
+        
+        System.out.println("Did any student get a perfect score? " + anyPerfectScore);
+        
+        // Calculate sum of all marks
+        double totalMarks = students.stream()
+            .mapToDouble(Student::getMarks)
+            .sum();
+        
+        System.out.println("Sum of all marks: " + totalMarks);
+    }
+    
+    // Grouping demonstration
+    public static void groupStudents(List<Student> students) {
+        System.out.println("\n----- Grouping Operations -----");
+        
+        // Group students by department
+        Map<String, List<Student>> studentsByDepartment = students.stream()
+            .collect(Collectors.groupingBy(Student::getDepartment));
+        
+        System.out.println("Students grouped by department:");
+        studentsByDepartment.forEach((dept, stdList) -> {
+            System.out.println(dept + ":");
+            stdList.forEach(s -> System.out.println("  - " + s.getName() + ": " + s.getMarks()));
+        });
+        
+        // Count students in each department
+        Map<String, Long> studentCountByDepartment = students.stream()
+            .collect(Collectors.groupingBy(Student::getDepartment, Collectors.counting()));
+        
+        System.out.println("Number of students in each department: " + studentCountByDepartment);
+        
+        // Average marks by department
+        Map<String, Double> avgMarksByDepartment = students.stream()
+            .collect(Collectors.groupingBy(
+                Student::getDepartment, 
+                Collectors.averagingDouble(Student::getMarks)));
+        
+        System.out.println("Average marks by department: " + avgMarksByDepartment);
+    }
+    
+    // Additional operations
+    public static void additionalOperations(List<Student> students) {
+        System.out.println("\n----- Additional Stream Operations -----");
+        
+        // Get first 3 students
+        List<Student> firstThree = students.stream()
+            .limit(3)
+            .collect(Collectors.toList());
+        
+        System.out.println("First 3 students:");
+        firstThree.forEach(s -> System.out.println(s.getName()));
+        
+        // Skip first 2 students
+        List<Student> afterSkipping = students.stream()
+            .skip(2)
+            .collect(Collectors.toList());
+        
+        System.out.println("After skipping first 2 students:");
+        afterSkipping.forEach(s -> System.out.println(s.getName()));
+        
+        // Get distinct departments
+        List<String> departments = students.stream()
+            .map(Student::getDepartment)
+            .distinct()
+            .collect(Collectors.toList());
+        
+        System.out.println("Departments: " + departments);
+        
+        // Performance categories using partitioning
+        Map<Boolean, List<Student>> performanceGroups = students.stream()
+            .collect(Collectors.partitioningBy(s -> s.getMarks() >= 80));
+        
+        System.out.println("High performers (marks >= 80):");
+        performanceGroups.get(true).forEach(s -> System.out.println(s.getName() + ": " + s.getMarks()));
+        
+        System.out.println("Regular performers (marks < 80):");
+        performanceGroups.get(false).forEach(s -> System.out.println(s.getName() + ": " + s.getMarks()));
+    }
+}
+```
+
+The Stream API in Java lets you process collections of data in a clean, functional style.  
+Streams are like assembly lines for data processing. You start with a collection (our student list), create a stream 
+from it, then apply operations to transform, filter, or analyze the data. Finally, you collect the results back into a 
+collection or a single value.
+
+Points to understand:
+
+- Streams don't modify the original collection
+- Stream operations are either intermediate (return another stream) or terminal (produce a result)
+- Most stream operations are lazy - they only process data when needed
+- Once a stream is consumed by a terminal operation, it cannot be reused
+
+Points to remember:
+
+- Use filter when you need to select elements
+- Use map when you need to transform elements
+- Use collect when you need to gather results into a collection
+- Use sorted for ordering elements
+- Use aggregation methods (average, sum, max) for data analysis
+- The Optional type is used with operations that might not produce a result
+- You can chain multiple operations together for complex data processing
 
 ### Optional class for null handling
 

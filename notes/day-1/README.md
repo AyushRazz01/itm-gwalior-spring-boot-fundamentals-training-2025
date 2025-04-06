@@ -865,9 +865,99 @@ Points to remember:
 - The Optional type is used with operations that might not produce a result
 - You can chain multiple operations together for complex data processing
 
+### Method reference
+
+A method reference is a shorthand way to refer to a method without actually calling it.
+
+It is a simpler alternative to lambda expressions when all you want to do is call an existing method.
+
+A method reference in Java is depicted using the `::` (double-color syntax)
+
+The `::` operator creates a reference to a method or constructor, essentially treating the method as a function object.
+
+It is not actually an operator in the traditional sense - it is a special syntax specifically for method references.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+@FunctionalInterface
+interface Coder {
+	String code(String language);
+}
+
+class Student {
+	private int rollNumber;
+	private String name;
+	private double marks;
+
+	public Student(int rollNumber, String name, double marks) {
+		this.rollNumber = rollNumber;
+		this.name = name;
+		this.marks = marks;
+	}
+	// rest of the POJO implementation
+}
+
+class Topper extends Student implements Coder {
+	public Topper(int rollNumber, String name, double marks) {
+		super(rollNumber, name, marks);
+	}
+
+	void createApplication() {
+		System.out.println("Creating application");
+	}
+	
+	@Override
+	public String code(String language) {
+		return "I can code in " + language + "!";
+	}
+}
+
+class Main {
+	public static void main(String[] args) {
+		List<Topper> toppers = new ArrayList<>();
+
+		for (int index = 0; index < 10; index++) {
+			toppers.add(new Topper(
+					index + 1,
+					"Topper " + index,
+					Math.random() * 100
+			));
+		}
+
+		toppers.forEach(Topper::createApplication);
+	}
+}
+```
+
 ### Optional class for null handling
 
-### Method reference
+Optional helps eliminate null pointer exceptions by forcing you to explicitly handle cases where a value might be absent.
+
+So, instead of writing something like
+
+```java
+class UserUtility {
+    public User findUserByEmail(String email) {
+		// implementation logic
+    }
+}
+```
+
+we should write
+
+```java
+class UserUtility {
+    public Optional<User> findUserByEmail(String email) {
+		// implementation logic
+    }
+}
+```
+
+Just a small chang like this forces us the developer to handle the case where the email will not match to 
+any of the users, in such a case instead of simply saying `return null`, now the return type `Optional<User>` of the method
+will not allow us to use the `null` as a return value. This will make you think what should actually be returned in such a case.
 
 ### Spring Core concepts
 

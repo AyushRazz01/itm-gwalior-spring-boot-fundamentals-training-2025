@@ -181,9 +181,139 @@ i.e. `rollNumber`, `name`, and `marks` as defined in the `Student` class.
 
 Also, you can _make_ the `chatur` object do something by calling the `Student` methods defined in the class.
 
+```java
+public class Main {
+    public static void main(String[] args) {
+        Student chatur = new Student();
+		chatur.rollNumber = 4;
+		chatur.name = "Chatur";
+		chatur.marks = 95;
+    }
+}
+```
+
 ### Inheritance and polymorphism in practice
 
 **Inheritance**
+
+Inheritance in Java, is a _technique_ by which a class (parent class/superclass) can share its data (fields/variables) and
+operations (methods) with another class (child class/subclass).
+
+Let us take the `Student` example from before.
+
+We want to create a new class called `Topper` which is a type of `Student`.
+Now this means, the `Topper` class should also define all the fields and methods created in the `Student` class.
+
+Instead of writing all the same code again, we can share the fields and methods of the Student class with the Topper class.
+**Important**: You may be tempted to create every class using inheritance from now on, don't do that!
+
+Inheritance not just about code-reusing, it is about making a parent and child relationship in Java code where an actual 
+such relationship exists in the real-world, i.e. if a real-world Topper entity and a Student entity are not related in the 
+real-world, we as developers should not add inheritance just because we can.
+
+code:
+
+```java
+public class Topper extends Student {
+    private int numberOfHoursStudied;
+
+    public Topper() {
+    }
+
+    public Topper(int rollNumber, String name, double marks, int numberOfHoursStudied) {
+        super(rollNumber, name, marks);
+        this.numberOfHoursStudied = numberOfHoursStudied;
+    }
+
+    public int getNumberOfHoursStudied() {
+        return numberOfHoursStudied;
+    }
+
+    public void setNumberOfHoursStudied(int numberOfHoursStudied) {
+        this.numberOfHoursStudied = numberOfHoursStudied;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Topper topper = (Topper) o;
+        return numberOfHoursStudied == topper.numberOfHoursStudied;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + numberOfHoursStudied;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Topper{" +
+                "numberOfHoursStudied=" + numberOfHoursStudied +
+                '}';
+    }
+}
+```
+
+We followed the POJO principles again to create the Topper class.
+
+Note that, just by writing the `extends <ClassName>` syntax in the Topper class, the Topper class
+can now actually 4 fields
+- int rollNumber (inherited from Student)
+- String name (inherited from Student)
+- double marks (inherited from Student)
+- int numberOfHoursStudied (created in Topper class)
+
+This is also true for all the methods created in the Student class.
+
+**Types of Relationships**
+
+* IS-A (inheritance)  
+    The `IS-A` relationship represents a real-world inheritance scenario where one class is a type
+    of another class.  
+    Ex - Topper IS-A Student  
+    Syntax - <ChildClass> IS-A <ParentClass>, if this sentence makes sense, then it is okay to add the `extends` keyword.  
+
+    ```java
+    public class Topper extends Student {}
+    ```
+
+* HAS-A (aggregation)
+    The `HAS-A` relationship represents _aggregation_ where one class contains another class as a field.
+    It is derived from the English word `aggregate`.
+
+    > aggregate  
+  noun | ˈaɡrɪɡət |  
+  a whole formed by combining several separate elements
+    
+    ```java
+    public class Car {
+        private Engine engine;
+        private SoundSystem soundSystem;
+        private NavigationSystem navigationSystem;
+    }
+    ```
+
+    In this example, we can say that the `Car` object is an _aggregate_ of
+    the `Engine` object + `SoundSystem` object + `NavigationSystem`.
+
+
+* USES-A (association/dependence)
+
+    The `USES-A` relationship represents _association_ or _dependence_ as a temporary
+    relationship where a class uses another class (often as a paremeter).
+
+    ```java
+    class College {
+        public void turnIntoEngineer(Student student) {}
+    }
+    ```
+
+    In this example, we can say that the `College` class uses a `Student` object.
+
 
 **Polymorphism**
 

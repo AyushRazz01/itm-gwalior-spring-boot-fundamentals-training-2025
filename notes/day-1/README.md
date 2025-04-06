@@ -409,15 +409,93 @@ via inheritance. So, in a way you can also say that inheritance is needed for ov
 
 **Abstract Class**
 
+An abstract class is like a blueprint that's not quite complete. It's a class that can't be used to create objects 
+directly but is meant to be extended by other classes. Abstract classes can have both regular methods with 
+implementations and abstract methods (methods without bodies) that child classes must implement.
+
+```java
+public abstract class Person {
+    protected String name;
+    protected int age;
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Regular method with implementation
+    public String getName() {
+        return name;
+    }
+    
+    // Abstract method - must be implemented by subclasses
+    public abstract String getRole();
+    
+    // Regular method with implementation
+    public String getDetails() {
+        return name + " (" + age + " years) - " + getRole();
+    }
+}
+```
+
 ---
 
 **Interface**
+
+An interface is a contract that specifies what a class can do, without saying how it does it. It is a program unit, like a class, but it can only have abstract methods* and final fields.
+
+Since Java 8, interfaces can also include default and static methods with implementations. Interfaces allow different 
+classes to be treated interchangeably if they implement the same interface, which is great for flexibility in your code.
+
+```java
+// Interface with a single abstract method
+interface Coder {
+    String code(String language);
+}
+
+// Topper class implementing both Student class and Coder interface
+public class Topper extends Student implements Coder {
+    private String achievement;
+    
+    public Topper(String name, int age, int rollNumber, double marks, String achievement) {
+        super(name, age, rollNumber, marks);
+        this.achievement = achievement;
+    }
+    
+    // Override method from parent class
+    @Override
+    public void updateMarks(double newMarks) {
+        // Ensure topper's marks are always at least 90
+        if (newMarks < 90) {
+            super.updateMarks(90.0);
+        } else {
+            super.updateMarks(newMarks);
+        }
+    }
+    
+    // Implementation of the code method from Coder interface
+    @Override
+    public String code(String language) {
+        return name + " is coding in " + language + " with excellence!";
+    }
+    
+    // Additional method specific to Topper
+    public String getAchievement() {
+        return achievement;
+    }
+}
+```
 
 ---
 
 ### Annotations in Java (built-in annotations and their purpose)
 
-**@Override**
+An annotation in Java is a special syntax that conveys information about the code; aka metadata.
+They are special tags or markers that you add to your code to provide extra information. They start with an @ symbol (like @Override) and can be attached to classes, methods, fields, and other program elements. Annotations don't directly affect your code's execution but they give instructions to the compiler, development tools, or frameworks about how to process your code.
+
+**@Override** is a common example of a Java annotation you use frequently.
+There are other annotations in Java and in other Java supported frameworks as we will learn 
+throughout this course, it is also possible to create your own annotation completely from scratch.
 
 ---
 

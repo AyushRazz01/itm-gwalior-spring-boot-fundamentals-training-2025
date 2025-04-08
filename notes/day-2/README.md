@@ -56,6 +56,36 @@ Make sure the **Language Level:** is set to `SDK default`.
 
 click on `apply` and then click on `ok`.
 
+**Step 2: Go to the [Spring Initializr Website](start.spring.io)**
+
+Go to the link given above and fill the details as mentioned below
+
+- Project: Maven
+- Language: Java
+- Spring Boot: 3.4.4
+- Project Metadata
+  - group: io.github.`<your-github-username>` (without any special characters)
+  - Artifact: hello-world
+  - Name: hello-world
+  - Description: Hello World Spring Boot Application
+  - Package name: io.github.`<your-github-username>`.hello.world
+  - Packaging: jar
+  - Java: 21
+- Dependencies: Spring Web
+
+To add the dependencies, click on the `Add Dependencies...` button on the top-right hand side corner of the website,
+and search for `Spring Web`, then click on it or select it and press `enter`.
+
+Your first Spring Boot application is now ready, you can now click on the `Generate` button.
+
+The website download a `hello-world.zip` file on your computer, save it to a folder you can remember.
+
+Open the folder where you have downloaded the `hello-world.zip` file and "unzip" the file, this will reveal a folder called `hello-world`.
+
+You can now open your IntelliJ IDEA and open this folder. This will open the Spring Boot application in your IntelliJ IDEA.
+
+`Congratulations! You have just taken the first step towards becoming a Spring Boot Java Developer!!`
+
 ### Maven project structure
 
 ### POM configuration and dependencies

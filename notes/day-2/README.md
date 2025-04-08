@@ -73,6 +73,11 @@ Go to the link given above and fill the details as mentioned below
   - Java: 21
 - Dependencies: Spring Web
 
+You can also use 
+[this link](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.4&packaging=jar&jvmVersion=21&groupId=io.github.dbc2201&artifactId=hello-world&name=hello-world&description=Hello%20World%20Spring%20Boot%20Application&packageName=io.github.dbc2201.hello.world&dependencies=web) to autofill the details. Just remember to use **YOUR OWN GITHUB USERNAME** instead of `dbc2201`.
+
+![img.png](res/images/spring-initializr.png)
+
 To add the dependencies, click on the `Add Dependencies...` button on the top-right hand side corner of the website,
 and search for `Spring Web`, then click on it or select it and press `enter`.
 

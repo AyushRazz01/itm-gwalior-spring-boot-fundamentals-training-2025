@@ -103,9 +103,96 @@ Inside the **"Project View"** you will be able to see all the files and folders 
 
 ![img.png](res/images/project-view.png)
 
+We will focus on the `pom.xml` file right now.
+Since you selected `Maven` as the "build system" for your Spring Boot project, you have this `pom.xml` file in your project view (or inside your project folder).
+
+#### What is `pom.xml` in a Spring Boot application?
+
+The `pom.xml` file is like a **recipe book** for your Spring Boot project. It tells **Maven** (a tool that builds and manages your Java projects) what your project needs to work.
+
+#### What does it include?
+
+1. **Project Info**
+	- Name of the project
+	- Version of the project
+	- Who made it
+
+2. **Dependencies**  
+   These are **libraries** or **tools** your project needs — for example:
+	- Spring Boot (to run your app)
+	- Thymeleaf (for HTML templates)
+	- MySQL (to connect to a database)
+	- Web or Security modules
+
+   Instead of downloading these by hand, you just list them, and Maven downloads them for you automatically.
+
+3. **Plugins**  
+   These help with extra tasks like:
+	- Running the Spring Boot app
+	- Building the project into a `.jar` file
+
+4. **Build Settings**  
+   It tells Maven **how to compile**, **package**, and **run** your project.
+
+#### Why is `pom.xml` important?
+
+Without it:
+- You’d have to manually download and set up a bunch of files and libraries.
+- Your code might not run because of missing tools or wrong versions.
+
+With it:
+- Everything is organized and automatic.
+- You can share your project with others, and they can run it easily too.
+
+---
+
 ### POM configuration and dependencies
 
+#### **What is POM Configuration?**
+
+**POM** stands for **Project Object Model**. It’s the main file in a Maven project — saved as `pom.xml`.
+
+**POM configuration** means setting up your project’s basic details and instructions in this file, such as:
+- Project name and version
+- Java version
+- Build settings
+- What tools and libraries (called *dependencies*) your project needs
+
+It tells Maven how to **build, run, and manage** your project.
+
+#### **What are Dependencies?**
+
+**Dependencies** are like ready-made tools or code written by others that your project needs to work.
+
+For example:
+- `spring-boot-starter-web` helps you build web apps
+- `spring-boot-starter-data-jpa` helps you connect to databases
+- `mysql-connector-java` lets your app talk to MySQL
+
+Instead of writing all this from scratch, you just **add a few lines to your `pom.xml`**, and Maven downloads everything for you.
+
+#### **Why is this useful?**
+
+- No need to manually download libraries.
+- Easy to manage versions and updates.
+- Makes your project clean, portable, and easy to share.
+
+---
+
 ### application.properties/YAML configuration
+
+#### What is application.properties or application.yml?
+In a Spring Boot application, application.properties or application.yml is a special file used to configure how your
+application behaves. It allows you to set values that your code can use, such as:
+- Server settings (like the port number)
+- Database connection details 
+- Custom variables (like a student name)
+- Logging settings 
+- Feature toggles
+
+Spring Boot reads this file when your app starts and uses the settings inside.
+
+---
 
 ### @SpringBootApplication anatomy
 

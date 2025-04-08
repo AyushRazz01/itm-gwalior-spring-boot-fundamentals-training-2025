@@ -39,6 +39,23 @@
 
 ### Spring Initializer (start.spring.io)
 
+[**Developing your First Spring Boot Application** (Spring Docs)](https://docs.spring.io/spring-boot/tutorial/first-application/index.html)
+
+**Step 1: Install Java JDK (21 - LTS)**
+
+If you have downloaded IntelliJ IDEA (Ultimate), it comes pre-installed with the latest version of the GA (Generally Available)
+JDK, which right now is Java OpenJDK 24, but we need to install Java JDK 21 (LTS - Long Term Support). 
+
+Press `ctrl + alt + shift + S` on Windows OR `cmd + ;` on a Mac to open the "Project Structure Window"
+
+![img.png](assets/images/project-structure.png)
+
+Make sure the **SDK:** is set to Java `21` (whichever flavor is available, OpenJDK/Amazon Coretto etc)
+
+Make sure the **Language Level:** is set to `SDK default`.
+
+click on `apply` and then click on `ok`.
+
 ### Maven project structure
 
 ### POM configuration and dependencies

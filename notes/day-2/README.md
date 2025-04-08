@@ -78,7 +78,7 @@ and search for `Spring Web`, then click on it or select it and press `enter`.
 
 Your first Spring Boot application is now ready, you can now click on the `Generate` button.
 
-The website download a `hello-world.zip` file on your computer, save it to a folder you can remember.
+The website will download a `hello-world.zip` file on your computer, save it to a folder you can remember.
 
 Open the folder where you have downloaded the `hello-world.zip` file and "unzip" the file, this will reveal a folder called `hello-world`.
 

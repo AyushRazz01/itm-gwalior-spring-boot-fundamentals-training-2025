@@ -45,7 +45,11 @@
 
 ---
 
-[Link to learn more about Java versions (Java Almanac)](https://javaalmanac.io/)
+**Official Learning Links**
+
+- [Link to learn more about Java versions (Java Almanac)](https://javaalmanac.io/)
+- [Objects, Classes, Interfaces, Packages, and Inheritance (dev.java)](https://dev.java/learn/oop/)  
+- [Classes & Objects (dev.java)](https://dev.java/learn/classes-objects/)
 
 ### Classes and Objects review
 
@@ -199,6 +203,10 @@ public class Main {
 ```
 
 ---
+
+**Official Learning Links**
+
+- [Inheritance (dev.java)](https://dev.java/learn/inheritance/)
 
 ### Inheritance and polymorphism in practice
 
@@ -442,6 +450,10 @@ public abstract class Person {
 
 ---
 
+**Official Learning Links**
+
+- [Interfaces (dev.java)](https://dev.java/learn/interfaces/)
+
 **Interface**
 
 An interface is a contract that specifies what a class can do, without saying how it does it. It is a program unit, like a class, but it can only have abstract methods* and final fields.
@@ -490,16 +502,24 @@ public class Topper extends Student implements Coder {
 
 ---
 
+**Official Learning Link**
+
+- [Annotations (dev.java)](https://dev.java/learn/annotations/)
+
 ### Annotations in Java (built-in annotations and their purpose)
 
-An annotation in Java is a special syntax that conveys information about the code; aka metadata.
-They are special tags or markers that you add to your code to provide extra information. They start with an @ symbol (like @Override) and can be attached to classes, methods, fields, and other program elements. Annotations don't directly affect your code's execution but they give instructions to the compiler, development tools, or frameworks about how to process your code.
+  An annotation in Java is a special syntax that conveys information about the code; aka metadata.
+  They are special tags or markers that you add to your code to provide extra information. They start with an @ symbol (like @Override) and can be attached to classes, methods, fields, and other program elements. Annotations don't directly affect your code's execution but they give instructions to the compiler, development tools, or frameworks about how to process your code.
 
-**@Override** is a common example of a Java annotation you use frequently.
-There are other annotations in Java and in other Java supported frameworks as we will learn 
-throughout this course, it is also possible to create your own annotation completely from scratch.
+  **@Override** is a common example of a Java annotation you use frequently.
+  There are other annotations in Java and in other Java supported frameworks as we will learn 
+  throughout this course, it is also possible to create your own annotation completely from scratch.
 
 ---
+
+**Official Learning Link**
+
+- [Lambdas (dev.java)](https://dev.java/learn/lambdas/)
 
 ### Lambda expression and Functional Interfaces
 
@@ -583,6 +603,10 @@ The general syntax for a lambda expression in Java is as follows
 The `->` here is a new operator added in Java 8 called the **arrow operator**.
 
 ---
+
+**Official Learning Link**
+
+- [The Stream API (dev.java)](https://dev.java/learn/api/streams/)
 
 ### Stream API basics
 

@@ -45,6 +45,8 @@
 
 ---
 
+[Link to learn more about Java versions (Java Almanac)](https://javaalmanac.io/)
+
 ### Classes and Objects review
 
 **What is a class?**

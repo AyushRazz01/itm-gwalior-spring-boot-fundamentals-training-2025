@@ -60,18 +60,18 @@ click on `apply` and then click on `ok`.
 
 Go to the link given above and fill the details as mentioned below
 
-- Project: Maven
-- Language: Java
-- Spring Boot: 3.4.4
+- Project: `Maven`
+- Language: `Java`
+- Spring Boot: `3.4.4`
 - Project Metadata
-  - group: io.github.`<your-github-username>` (without any special characters)
-  - Artifact: hello-world
-  - Name: hello-world
-  - Description: Hello World Spring Boot Application
-  - Package name: io.github.`<your-github-username>`.hello.world
-  - Packaging: jar
-  - Java: 21
-- Dependencies: Spring Web
+  - group: **io.github.`<your-github-username>`** (without any special characters)
+  - Artifact: `hello-world`
+  - Name:` hello-world`
+  - Description: `Hello World Spring Boot Application`
+  - Package name: **io.github.`<your-github-username>`.hello.world**
+  - Packaging: `jar`
+  - Java: `21`
+- Dependencies: `Spring Web`
 
 You can also use 
 [this link](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.4&packaging=jar&jvmVersion=21&groupId=io.github.dbc2201&artifactId=hello-world&name=hello-world&description=Hello%20World%20Spring%20Boot%20Application&packageName=io.github.dbc2201.hello.world&dependencies=web) to autofill the details. Just remember to use **YOUR OWN GITHUB USERNAME** instead of `dbc2201`.
@@ -92,6 +92,16 @@ You can now open your IntelliJ IDEA and open this folder. This will open the Spr
 `Congratulations! You have just taken the first step towards becoming a Spring Boot Java Developer!!`
 
 ### Maven project structure
+
+* [Build Systems (Spring Docs)](https://docs.spring.io/spring-boot/reference/using/build-systems.html)
+* [Structuring Your Code (Spring Docs)](https://docs.spring.io/spring-boot/reference/using/structuring-your-code.html)
+* [Maven Plugin (Spring Docs)](https://docs.spring.io/spring-boot/maven-plugin/index.html)
+
+You can open the **"Project View"** by pressing `cmd + 1` on a Mac or `alt + 1` on Windows.
+
+Inside the **"Project View"** you will be able to see all the files and folders related to your Spring Boot application.
+
+![img.png](res/images/project-view.png)
 
 ### POM configuration and dependencies
 

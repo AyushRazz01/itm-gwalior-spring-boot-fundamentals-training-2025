@@ -48,7 +48,7 @@ JDK, which right now is Java OpenJDK 24, but we need to install Java JDK 21 (LTS
 
 Press `ctrl + alt + shift + S` on Windows OR `cmd + ;` on a Mac to open the "Project Structure Window"
 
-![img.png](assets/images/project-structure.png)
+![img.png](res/images/project-structure.png)
 
 Make sure the **SDK:** is set to Java `21` (whichever flavor is available, OpenJDK/Amazon Coretto etc)
 

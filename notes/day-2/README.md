@@ -196,22 +196,80 @@ Spring Boot reads this file when your app starts and uses the settings inside.
 
 ### @SpringBootApplication anatomy
 
+[Using the @SpringBootApplication annotation (Spring Docs)](https://docs.spring.io/spring-boot/reference/using/using-the-springbootapplication-annotation.html#page-title)
+
+The @SpringBootApplication annotation is a shortcut that combines three annotations in one. When you add it to your main class, it tells Spring Boot to:
+
+- Search for components to use in your application
+- Set up default configurations automatically
+- Enable the main application class
+
+This single annotation saves you from writing lots of configuration code yourself.
+
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+// Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan
+@SpringBootApplication
+public class MyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MyApplication.class, args);
+	}
+
+}
+```
+
+---
+
 ### Component scanning
+
+Component scanning is like Spring Boot's search engine. When your app starts, Spring Boot looks through your project 
+folders to find special classes marked with annotations like `@Component`, `@Service`, or `@Controller`.  
+When it finds these marked classes, Spring automatically creates objects (beans) from them and makes them available for 
+use in your application. It's like Spring does the "new Object()" work for you!
+By default, Spring only searches in the package of your main application class and its sub-packages. 
+If you need Spring to look elsewhere, you can tell it where to search using `@ComponentScan` annotation.
+
+---
 
 ### Auto-configuration
 
+Auto-configuration is Spring Boot's magic trick that saves you from writing tons of setup code. It works like this:
+
+- Spring Boot looks at the libraries in your project
+- It makes educated guesses about what you're trying to build
+- It automatically sets up necessary components with sensible defaults
+
+For example, if you add a database library, Spring Boot will automatically set up database connections for you. If you add web libraries, it configures a web server automatically.
+You can override these automatic settings in your application.properties file when needed, but often the defaults work perfectly fine!
+
+---
+
 ### Profiles for environment specific configuration
+
+---
 
 ### Bean lifecycle
 
+---
+
 ### @Component, @Service, @Repository annotations
+
+---
 
 ### @Autowired and constructor injection
 
+---
+
 ### Scopes of Spring beans (Singleton vs Prototype)
+
+---
 
 ### Building a simple service layer
 
 ---
 
 ## Practical Exercise
+
